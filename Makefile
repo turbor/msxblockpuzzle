@@ -8,7 +8,7 @@ run:
 	openmsx -machine Philips_NMS_8250  -ext debugdevice -script startup.tcl -carta msxwood.crt
 
 msxwood.crt:	bcdlib.asc gridbitmapmanipulators.asc piecelib.asc variablespace.asc bios.asc joystick.asc pieces.asc gameover.asc msxwood.asc testbcdlib.asc routines.asc charanimation.asc boxcopy.asc bigscroller.asc
-	pasmo --bin --nocase msxwood.asc msxwood.crt msxwood.txt
+	pasmo --bin --nocase msxwood.asc msxwood.crt msxwood.symbol msxwood.publics
 
 testbcd.bin:	testbcdlib.asc
 	pasmo --msx testbcdlib.asc testbcd.bin
