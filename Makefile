@@ -1,14 +1,14 @@
-all:	msxwood.crt
-	openmsx -machine Philips_VG_8020  -ext debugdevice -script startup.tcl -carta msxwood.crt
+all:	msxwood.rom
+	openmsx -machine Philips_VG_8020  -ext debugdevice -script startup.tcl -carta msxwood.rom
 
 clean:
-	rm msxwood.crt
+	rm msxwood.rom
 
 run:
-	openmsx -machine Philips_NMS_8250  -ext debugdevice -script startup.tcl -carta msxwood.crt
+	openmsx -machine Philips_NMS_8250  -ext debugdevice -script startup.tcl -carta msxwood.rom
 
-msxwood.crt:	vram-*.txt *.asc
-	pasmo --bin --nocase msxwood.asc msxwood.crt msxwood.symbol msxwood.publics
+msxwood.rom:	vram-*.txt *.asc
+	pasmo --bin --nocase msxwood.asc msxwood.rom msxwood.symbol msxwood.publics
 
 testbcd.bin:	testbcdlib.asc
 	pasmo --msx testbcdlib.asc testbcd.bin
