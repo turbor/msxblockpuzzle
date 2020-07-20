@@ -1,10 +1,11 @@
 # blockpuzzle
 MSX1 block puzzle.
 This is an attempt to create a MSX1 game that would run on a simple standard machine with 16KB of ram.
+When the music was added the 16KB rom boundary was broken and since I didn't want to start fidling with compression it is now a 32KB rom.
 
 It is a casual puzzle game, you need to place the blocks in the grid in the attempt to fill rows or columns.
 There are 3 blocks available and you can use the 'M' key to switch between the blocks otherwise simply move the blocks using the cursor keys and put it in place with the space key.
-Once the 3 pieces are placed on the grid, 4 random new pieces will be selected.
+Once the 3 pieces are placed on the grid, 3 random new pieces will be selected.
 Extra points are rewarded if multiple lines are removed at once.
 The difficulty selection influences the changes of the blocks that will be selected at random.
 
