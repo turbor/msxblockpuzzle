@@ -74,7 +74,12 @@ SRAM_MODULE_INIT_L2:
 	CP	'Y'
 	JR	Z, SRAM_MODULE_INIT_L4
 	CP	'y'
-	RET NZ
+    JR  Z, SRAM_MODULE_INIT_L4
+    CP  'N'
+    RET Z
+    CP  'n'
+    RET Z
+	JR  SRAM_MODULE_INIT_L2
 SRAM_MODULE_INIT_L4:
     ; write header and initial state
     LD	HL, SRAM_BEGIN
